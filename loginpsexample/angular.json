@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "db4638d9-e14f-482e-ab1e-5eea7af1725f"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "loginpsv1": {
+    "loginpsexample": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/loginpsv1",
+            "outputPath": "dist/loginpsexample",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "loginpsv1:build:production"
+              "browserTarget": "loginpsexample:build:production"
             },
             "development": {
-              "browserTarget": "loginpsv1:build:development"
+              "browserTarget": "loginpsexample:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "loginpsv1:build"
+            "browserTarget": "loginpsexample:build"
           }
         },
         "test": {
@@ -110,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "loginpsv1"
+  "defaultProject": "loginpsexample"
 }
