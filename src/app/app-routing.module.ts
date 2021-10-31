@@ -8,9 +8,9 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: "login", component: LoginComponent },
-  { path: "register", component: RegisterComponent },
-  { path: "home", component: HomeComponent }];
+  { path: "login", component: LoginComponent, pathMatch: 'full' },
+  { path: "register", component: RegisterComponent, pathMatch: 'full' },
+  { path: "home", component: HomeComponent, pathMatch: 'full' }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
