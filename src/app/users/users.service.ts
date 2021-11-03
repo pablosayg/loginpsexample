@@ -17,7 +17,8 @@ export class UsersService {
   // }
 
   login(user: any): Observable<any> {
-    return this.http.post("https://prueba.ccinco.net/api/user/login", user);
+    //return this.http.post("https://prueba.ccinco.net/api/user/login", user);
+    return this.http.get("https://prueba.ccinco.net/api/user/login");
   }
 
   // register(user: any): Observable<any> {
