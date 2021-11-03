@@ -20,6 +20,6 @@ Route::get('/', function () {
 
 Route::post('/api/user/createAdmin', 'UserController@createAdmin');
 Route::post('/api/user/register', 'UserController@register');
-Route::post('/api/user/login', 'UserController@login');
+Route::get('/api/user/login', 'UserController@login');
 //Route::put('/api/user/update', 'UserController@update')->middleware(App\Http\Middleware\ApiAuthMiddleware::class);
 Route::put('/api/user/update', 'UserController@update');
