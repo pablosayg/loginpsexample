@@ -17,19 +17,7 @@ export class UsersService {
   // }
 
   login(user: any): Observable<any> {
-    return this.http.post("https://pablosayg.github.io/loginpsexample/api/user/login", user);
-  }
-
-  login2(user: any): Observable<any> {
-    return this.http.post("https://pablosayg.github.io/loginpsexample/pcs.backend/api/user/login", user);
-  }
-
-  login3(user: any): Observable<any> {
-    return this.http.post("https://pablosayg.github.io/loginpsexample/pcs.backend/public/api/user/login", user);
-  }
-
-  login4(user: any): Observable<any> {
-    return this.http.post("https://pablosayg.github.io/loginpsexample/pcs.backend/api/user/login", user);
+    return this.http.post("https://prueba.ccinco.net/api/user/login", user);
   }
 
   // register(user: any): Observable<any> {

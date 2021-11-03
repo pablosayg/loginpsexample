@@ -28,49 +28,16 @@ export class LoginComponent implements OnInit {
     this.userService.login(user).subscribe(data => {
       this.userService.setToken(data.token);
       this.router.navigateByUrl('/home');
-      console.log("estoy validando login 1");
+      console.log("traigo algo we :'D");
       console.log(user);
       console.log(data.token);
     },
       error => {
+        console.log("pos ni modo, error");
         console.log(error);
       });
 
 
-    this.userService.login2(user).subscribe(data => {
-      this.userService.setToken(data.token);
-      this.router.navigateByUrl('/home');
-      console.log("estoy validando login 2 ");
-      console.log(user);
-      console.log(data.token);
-    },
-      error => {
-        console.log(error);
-      });
-
-
-    this.userService.login3(user).subscribe(data => {
-      this.userService.setToken(data.token);
-      this.router.navigateByUrl('/home');
-      console.log("estoy validando login 3");
-      console.log(user);
-      console.log(data.token);
-    },
-      error => {
-        console.log(error);
-      });
-
-
-    this.userService.login4(user).subscribe(data => {
-      this.userService.setToken(data.token);
-      this.router.navigateByUrl('/home');
-      console.log("estoy validando login 4");
-      console.log(user);
-      console.log(data.token);
-    },
-      error => {
-        console.log(error);
-      });
 
   }
 }
