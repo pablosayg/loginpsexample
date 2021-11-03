@@ -20,9 +20,9 @@ export class UsersService {
     return this.http.post("https://pablosayg.github.io/loginpsexample/api/user/login", user);
   }
 
-  register(user: any): Observable<any> {
-    return this.http.post("https://reqres.in/api/register", user);
-  }
+  // register(user: any): Observable<any> {
+  //   return this.http.post("https://reqres.in/api/register", user);
+  // }
 
   setToken(token: string) {
     this.cookies.set("token", token);
@@ -31,9 +31,9 @@ export class UsersService {
     return this.cookies.get("token");
   }
 
-  getUser() {
-    return this.http.get("https://reqres.in/api/users/2");
-  }
+  // getUser() {
+  //   return this.http.get("https://reqres.in/api/users/2");
+  // }
   getUserLogged() {
     const token = this.getToken();
     // Aquí iría el endpoint para devolver el usuario para un token
