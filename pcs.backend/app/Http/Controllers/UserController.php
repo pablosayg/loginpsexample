@@ -133,7 +133,7 @@ class UserController extends Controller
 
     public function login(Request $request){
 
-        //$jwtAut = new \App\Helpers\JwtAuth();        
+        /*//$jwtAut = new \App\Helpers\JwtAuth();        
         $jwtAut = new \JwtAuth();
 
         // Recibir datos por POST
@@ -174,8 +174,8 @@ class UserController extends Controller
                 'code' => 200,
                 'message' => 'Los datos enviados no son correctos'
             );
-        }
-        //$signup = 'token hola pablito';
+        }*/
+        $signup = 'token hola pablito';
         return response()->json($signup, 200);
     }
 
