@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\User;
 
+header('Access-Control-Allow-Origin: *');
+
 class UserController extends Controller
 {
 
