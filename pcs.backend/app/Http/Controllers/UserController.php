@@ -14,6 +14,8 @@ class UserController extends Controller
         $string = json_encode($array);
         $json = json_decode($string);
 
+        //var_dump($array); var_dump($string); var_dump($json); die();
+
         $validate = \Validator::make($array, [
             'email_emp' => 'required|email|unique:pcs_usuario', // unique:tabla(db)
             'contrasena' => 'required'
@@ -33,7 +35,7 @@ class UserController extends Controller
                 // cifrar contraseña
                 $pwd = hash('sha256', $json->contrasena);
 
-                $fechaActual = date('y-m-d');
+                $fechaActual = date('y-m-d H:i:s');
 
                 $user = new User();
                 $user->email_emp = $json->email_emp;
@@ -131,7 +133,7 @@ class UserController extends Controller
 
     public function login(Request $request){
 
-        /*//$jwtAut = new \App\Helpers\JwtAuth();        
+        //$jwtAut = new \App\Helpers\JwtAuth();        
         $jwtAut = new \JwtAuth();
 
         // Recibir datos por POST
@@ -172,8 +174,8 @@ class UserController extends Controller
                 'code' => 200,
                 'message' => 'Los datos enviados no son correctos'
             );
-        }*/
-        $signup = 'token hola pablito';
+        }
+        //$signup = 'token hola pablito';
         return response()->json($signup, 200);
     }
 
